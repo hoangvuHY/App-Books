@@ -1,4 +1,4 @@
-###### App-Books
+# App-Books
 ## To get started with this project you need to create a directory to host the project
 ## Open Git Bash
 ## Clone into your directory
