@@ -1,15 +1,15 @@
 # App-Books
-## To get started with this project you need to create a directory to host the project
-## Open Git Bash
-## Clone into your directory
+### To get started with this project you need to create a directory to host the project
+### Open Git Bash
+### Clone into your directory
 Git clone: `git clone https://github.com/hoangvuHY/App-Books.git`
-## Path to the App-Books file
+### Path to the App-Books file
 `cd App-Books`
-## Install packages
+### Install packages
 `npm install`
-## Project start
+### Project start
 `npm start`
-## Login account
+### Login account
 Account User
 `
 email: user1@gmail.com
