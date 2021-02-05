@@ -8,7 +8,8 @@ const {
   updateBookService,
   deleteBookService,
   findAllBooksService,
-  findOneBookService
+  findOneBookService,
+  findBookByNameService
 } = require("../services/books");
 
 const createBookController = async (req, res) => {
@@ -82,10 +83,32 @@ const findOneBooksController = async (req, res) => {
   }
 }
 
+const findBookByNameController = async (req, res) => {
+  try {
+    const idUser = req.user._id || req.body.idUser;
+    const { name } = req.body;
+    var searchName;
+    if (name === '') {
+      searchName = await findAllBooksService(idUser);
+    } else {
+      searchName = await findBookByNameService(name);
+    }
+    if (searchName) {
+      caseSuccess(res, "Sách của bạn", searchName);
+    } else {
+      caseErrorClient(res, "Lấy thông tin sách thất bại");
+    }
+  } catch (error) {
+    caseErrorServer(res, error);
+
+  }
+}
+
 module.exports = {
   createBookController,
   deleteBookController,
   updateBookController,
   findAllBooksController,
-  findOneBooksController
+  findOneBooksController,
+  findBookByNameController
 }

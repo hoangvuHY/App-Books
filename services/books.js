@@ -17,11 +17,16 @@ const findOneBookService = (_id) => {
   return Books.findOne({ _id });
 }
 
+const findBookByNameService = (name) => {
+  return Books.find({ name });
+}
+
 
 module.exports = {
   createBookService,
   updateBookService,
   deleteBookService,
   findOneBookService,
-  findAllBooksService
+  findAllBooksService,
+  findBookByNameService
 }

@@ -7,6 +7,7 @@ $(document).ready(function () {
   $('.addBook').click(addBook);
   getAllBooks();
   $(".logout").click(logoutUser);
+  $('.search-tool button').click(searchBookName)
 });
 
 const addBook = async (e) => {
@@ -52,31 +53,7 @@ const getAllBooks = async () => {
   }).then((result) => {
     if (result.status === 200 && !result.error) {
       const { data } = result;
-      const allBook = $(".all-books");
-      allBook.empty();
-      data.forEach(book => {
-        const template = `
-      <div class="col s6 m6 l4 xl3">
-        <div class="card">
-          <div class="card-image">
-            <img src="https://materializecss.com/images/sample-1.jpg">
-            <span class="card-title">${book.name}</span>
-          </div>
-          <div class="card-content">
-            <p class='description' >
-             ${book.description}  
-            </p>
-            <p class="book-authors"> ${book.author}</p>
-          </div>
-          <div class="card-action">
-            <a data-id=${book._id} onclick= updateBook.call(this)  class="btn-update-book waves-effect waves-light btn modal-trigger" href="#update-book">Update</a>
-            <button data-id=${book._id} onclick= deleteBook.call(this) class="btn-delete-book waves-effect waves-light btn">Delete</button>
-          </div>
-        </div>
-      </div>
-  `
-        allBook.append(template);
-      });
+      getDetailBooks(data);
     }
   }).catch((err) => {
     console.log(err);
@@ -179,4 +156,55 @@ async function acceptUpdateBook() {
   }).catch((err) => {
     console.log(err);
   });
+}
+
+
+const searchBookName = async () => {
+  const name = $(".search-name").val();
+  await $.ajax({
+    method: 'post',
+    url: "/books/search-book-name",
+    data: { name }
+  }).then((result) => {
+    if (result.status === 200 && !result.error) {
+      const { data } = result;
+      getDetailBooks(data);
+    }
+  }).catch((err) => {
+    console.log(err);
+  });
+}
+
+const getDetailBooks = (data) => {
+  const allBook = $(".all-books");
+
+  var template;
+  allBook.empty();
+  if (data.length === 0) {
+    allBook.append(`<h2>Not found! :( </h2>`)
+  } else {
+    data.forEach(book => {
+      template = `
+  <div class="col s6 m6 l4 xl3">
+    <div class="card">
+      <div class="card-image">
+        <img src="https://materializecss.com/images/sample-1.jpg">
+        <span class="card-title">${book.name}</span>
+      </div>
+      <div class="card-content">
+        <p class='description' >
+         ${book.description}  
+        </p>
+        <p class="book-authors"> ${book.author}</p>
+      </div>
+      <div class="card-action">
+        <a data-id=${book._id} onclick= updateBook.call(this)  class="btn-update-book waves-effect waves-light btn modal-trigger" href="#update-book">Update</a>
+        <button data-id=${book._id} onclick= deleteBook.call(this) class="btn-delete-book waves-effect waves-light btn">Delete</button>
+      </div>
+    </div>
+  </div>
+`;
+      allBook.append(template);
+    });
+  }
 }

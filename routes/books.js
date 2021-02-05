@@ -8,7 +8,8 @@ const {
   updateBookController,
   deleteBookController,
   findAllBooksController,
-  findOneBooksController
+  findOneBooksController,
+  findBookByNameController
 } = require('../controllers/books');
 
 router.use(checkTokenMiddleware);
@@ -19,5 +20,7 @@ router.get('/:id', findOneBooksController);
 router.post('/create', createBookController);
 router.put('/update/:id', updateBookController);
 router.delete('/delete/:id', deleteBookController);
+
+router.post('/search-book-name', findBookByNameController);
 
 module.exports = router;
