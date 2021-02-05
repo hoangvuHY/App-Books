@@ -42,9 +42,7 @@ Step 4. Type the following link in your browser (Chrome) to go to the Login page
       http://localhost:8080/login
 
 
-Step 5. Log in with the following fields:
-Email: user1@gmail.com
-Password: 1
+Step 5. Register and login to use
 
 Step 6: Perform your functions such as:  add, edit, delete, ...
 
