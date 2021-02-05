@@ -181,7 +181,7 @@ const getDetailBooks = (data) => {
   var template;
   allBook.empty();
   if (data.length === 0) {
-    allBook.append(`<h2>Not found! :( </h2>`)
+    allBook.append(`<h2>Nothing at all! :( </h2>`)
   } else {
     data.forEach(book => {
       template = `

@@ -1,6 +1,6 @@
 var connectDB = () => {
   const mongoose = require('mongoose');
-  let URL = process.env.MONGO_DB_TEMP;
+  let URL = process.env.MONGO_DB;
   mongoose.connect(URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
