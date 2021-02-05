@@ -55,8 +55,8 @@ const loginUser = async (e) => {
     }
   }).then((result) => {
     if (result.status === 200 && !result.error) {
-      // window.location.href = '/';
-      console.log(result);
+      window.location.href = '/';
+      // console.log(result);
       alert(result.message);
     } else {
 
