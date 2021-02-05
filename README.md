@@ -1,9 +1,10 @@
 # SETA-TEST
 ### NODEJS
+
 Step 1. Clone repo to your computer with
       `git clone https://github.com/hoangvuHY/App-Books.git`
 Step 2. Create .env file and copy file example.env --> .env
-`cd App-Books`
+
 Step 3. Run
 `npm install`
 Step 4. Run
