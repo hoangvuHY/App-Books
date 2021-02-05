@@ -27,9 +27,9 @@ to see results.
 ### Database
 I create a simple dababase with 2 tables: 
      
-     books ( _id, name, idUser, idUser, description)
+     books: _id, name, idUser, idUser, description
      
-     users (id, email, password)
+     users: _id, email, password, birthday, address
 
 ### Technical
 
@@ -38,7 +38,14 @@ I create a simple dababase with 2 tables:
 ###### 2. Database Management Systems: Mongo Database
 
 ###### 3. Node package manager:
-
+      + express
+      + bcrypt to hash password
+      + dotenv to config environment variable
+      + jsonwebtoken to create json web token and check it
+      + mongoose to connect to MongoDB
+      + nodemon
+      + cookie-parser
+      + ejs
 
 
 ### MONGODB Query
