@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-  $(".btn.submit-register-submit").click(registerUser);
+  $(".btn.register-submit").click(registerUser);
   $(".btn.login-submit").click(loginUser);
 });
 const registerUser = async (e) => {
@@ -11,7 +11,7 @@ const registerUser = async (e) => {
   const email = $(".email-register").val();
   const password = $(".password-register").val();
   const confirmPassword = $(".confirm-password-register").val();
-
+ 
   if (checkPassword(password, confirmPassword)) {
     await $.ajax({
       method: "post",
@@ -55,7 +55,8 @@ const loginUser = async (e) => {
     }
   }).then((result) => {
     if (result.status === 200 && !result.error) {
-      window.location.href = '/';
+      // window.location.href = '/';
+      console.log(result);
       alert(result.message);
     } else {
 
