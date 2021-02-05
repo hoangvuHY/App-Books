@@ -27,6 +27,11 @@
 - deleteOne
 
 ## II. SETTING
+### The computer must be pre-installed with the following technologies: 
+* nodejs: https://nodejs.org/en/download
+* MongoDB Community Server (localhost) : https://www.mongodb.com/try/download/community
+
+
 Step 1. Clone repo to your computer with
 
       git clone https://github.com/hoangvuHY/App-Books.git
@@ -36,6 +41,8 @@ Step 2. Edit the parameters in the .env file to suit the configuration of your d
 Step 3. Run in cmd
       
       npm install
+      
+      npm start
 
 Step 4. Type the following link in your browser (Chrome) to go to the Login page:
       
@@ -56,3 +63,4 @@ Step 6: Perform your functions such as:  add, edit, delete, ...
 Run in cmd
 
       npm run test
+# SETA-TEST_NODEJS
