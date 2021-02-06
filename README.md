@@ -51,7 +51,7 @@ Step 4. Type the following link in your browser (Chrome) to go to the Login page
 
 Step 5. Register and login to use
 
-Step 6: Perform your functions such as:  add, edit, delete, ...
+Step 6: Perform your functions such as:  add, edit, delete, search, ...
 
 
 ## III. ALGORITHM TEST
