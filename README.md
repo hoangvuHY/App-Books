@@ -34,7 +34,7 @@
 
 Step 1. Clone repo to your computer with
 
-      git clone https://github.com/hoangvuHY/App-Books.git
+      git clone https://github.com/hoangvuHY/SETA-TEST.git
       
 Step 2. Edit the parameters in the .env file to suit the configuration of your device
 
