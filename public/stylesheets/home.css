@@ -47,6 +47,7 @@ body {
   .card-action {
     display: flex;
     justify-content: space-between;
+    padding: 20px 10px !important;
   }
   .card .card-content p.description {
     -webkit-box-orient: vertical;
@@ -55,10 +56,11 @@ body {
     overflow: hidden;
   }
   .card-action a, .card-action button {
-    width: 70px;
-    font-size: 11px;
+    width: 30%;
+    font-size: 8px;
     border-radius: 10px;
     background: #FFC107;
+    padding-left: 11px;
   }
   .card-action a:hover {
     background: #E0A800;
@@ -109,19 +111,19 @@ body {
     color: white;
   }
   .row .input-field {
-    width: 95%;
+    width: 96%;
     margin-left: 11px;
   }
   .input-field label, .input-field label::after {
     color: #F5F5F5 !important;
   }
-  form#add-book, div#update-book {
-    width: 490px;
-    height: 440px;
+  form#add-book, form#update-book {
+    width: 570px;
+    height: 460px;
     background: #3F093F;
     border: 10px solid white;
   }
-  form#add-book .modal-content h4, div#update-book .modal-content h4 {
+  form#add-book .modal-content h4, form#update-book .modal-content h4 {
     color: white;
   }
   a.brand-logo {

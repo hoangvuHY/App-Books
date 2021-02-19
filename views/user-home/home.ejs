@@ -42,38 +42,54 @@
               <div class="row name-book ">
                 <div class="input-field">
                   <!--   col s12 -->
-                  <input id="name-book-add" type="text" class="validate">
+                  <input id="name-book-add" name="name" type="text" class="validate">
                   <label for="name-book-add">Name Book</label>
                 </div>
               </div>
               <div class="row authors">
                 <div class="input-field">
                   <!--   col s12 -->
-                  <input id="author-book-add" type="text" class="validate">
+                  <input id="author-book-add" name="author" type="text" class="validate">
                   <label for="author-book-add">Author Book</label>
                 </div>
               </div>
               <div class="row descriptions ">
                 <div class="input-field col s12">
-                  <textarea id="textarea-add" class="materialize-textarea"></textarea>
+                  <textarea id="textarea-add" name="description" class="materialize-textarea"></textarea>
                   <label for="textarea-add">Textarea</label>
+                </div>
+              </div>
+              <div class="file-field input-field ">
+                <div class="btn">
+                  <span>File</span>
+                  <input type="file" name="many-images" id="input-many-images" multiple>
+                </div>
+                <div class="file-path-wrapper">
+                  <input class="file-path validate" type="text" placeholder="Upload one or more files">
                 </div>
               </div>
             </div>
             <div class="modal-footer">
-              <a href="#!" class="addBook modal-close waves-effect waves-green btn-flat">Agree</a>
+              <a href="#" class="addBook modal-close waves-effect waves-green btn-flat">Agree</a>
             </div>
           </form>
           <!-- Modal update Book -->
-          <div id="update-book" class="modal">
+          <form id="update-book" class="modal">
+
+
+          </form>
+          <!-- End -->
+          </form>
+          <!-- Modal Detail Book -->
+          <div id="detail-book" class="modal">
 
 
           </div>
           <!-- End -->
-        </div>
-      </div>
-    </div><!-- book card -->
-  </div>
 
-  <%include ../common/footer %>
-    <script src="/javascripts/home.js"></script>
+        </div>
+      </div><!-- book card -->
+    </div>
+
+    <%include ../common/footer %>
+      <script src="/javascripts/home.js"></script>
